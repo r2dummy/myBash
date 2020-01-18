@@ -1,7 +1,13 @@
 #!/bin/bash
 
-#$1 - Path_to_file_with_key_value_sting
+#$1 - Path_to_file_with_key_value_string
 #$2 - Path_to_folder_where_need_change
+#--------------------
+# Example of file:
+# key value
+# key1 value1
+# key2 value2
+#--------------------
 
 rm -rf /tmp/lists_of_files.txt
 for file in $2
@@ -18,7 +24,7 @@ done
 
   for each_file in $(cat /tmp/lists_of_files.txt )
     do
-    echo "Working with $each_file file name now"
+    echo "Working with $each_file file now"
       for i in "${!main_file[@]}"
         do
           search=$i
